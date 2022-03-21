@@ -94,14 +94,13 @@ body {
   height: 370px;
   overflow-y: scroll;
   grid-column: 2;
-  
 }
 
-.estruturas-lista li:hover{
-  transition: .2s;
+.estruturas-lista li:hover {
+  transition: 0.2s;
 }
 
-.estruturas-lista li:hover{
+.estruturas-lista li:hover {
   cursor: pointer;
   filter: opacity(60%);
 }
@@ -138,6 +137,7 @@ body {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   color: #0077c7;
+  cursor: pointer;
 }
 
 .faq-lista dt::before {
@@ -234,7 +234,7 @@ body {
 
 .js .js-tabcontent section.ativo {
   display: block !important;
-  animation: show .5s forwards;
+  animation: show 0.5s forwards;
 }
 
 @keyframes show {
@@ -246,4 +246,46 @@ body {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+.js .js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: "⮟";
+  margin-left: 10px;
+  display: inline-block;
+  transition: .2s;
+}
+
+.js-accordion dt.ativo::after {
+  transform: rotate(180deg);
+}
+
+.js-accordion dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+.js .js-scroll{
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: .3s;
+}
+
+.js .js-scroll.ativo{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
