@@ -27,7 +27,6 @@ export default function initTooltip() {
     handleEvent(event) {
       this.tooltipBox.style.top = event.pageY + 20 + "px";
       this.tooltipBox.style.left = event.pageX + 20 + "px";
-      this.element.removeEventListener("mousemove", onMouseMove);
     },
   };
 

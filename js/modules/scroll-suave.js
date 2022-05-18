@@ -1,5 +1,7 @@
 export default function initScrollSuave() {
-  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"');
+  const linksInternos = document.querySelectorAll(
+    '[data-menu="suave"] a[href^="#"'
+  );
 
   function scrollToSection(event) {
     event.preventDefault();
@@ -10,13 +12,6 @@ export default function initScrollSuave() {
       behavior: "smooth",
       block: "start",
     });
-
-    /* alternativa
-    window.scrollTo({
-    const topo = section.offsetTop;
-    top: topo,
-    behavior: "smooth",
-  }) */
   }
 
   linksInternos.forEach((link) => {
