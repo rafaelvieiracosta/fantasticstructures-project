@@ -11,6 +11,8 @@ import Funcionamento from "./modules/funcionamento.js";
 import fetchVisitas from "./modules/fetch-visitas.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
 
+import { Slider, SliderNav } from "./modules/slider.js";
+
 const scrollsuave = new ScrollSuave('[data-menu="suave"] li a[href^="#"]');
 scrollsuave.init();
 
@@ -50,3 +52,7 @@ funcionamento.init();
 
 fetchVisitas("../visitasapi.json", ".numeros-grid");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
+
+const slider = new SliderNav(".slider", ".slider-wrapper");
+slider.init();
+slider.addControl(".custom-controls");
