@@ -50,7 +50,10 @@ menumobile.init();
 const funcionamento = new Funcionamento("[data-semana]", "aberto");
 funcionamento.init();
 
-fetchVisitas("../visitasapi.json", ".numeros-grid");
+fetchVisitas(
+  "https://rafaelvieiracosta.github.io/fantasticstructures-project/visitasapi.json",
+  ".numeros-grid"
+);
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 
 const slider = new SliderNav(".slider", ".slider-wrapper");
